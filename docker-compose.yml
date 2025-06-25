@@ -1,0 +1,23 @@
+version: '0.3.8'
+
+services:
+  mtllm-artifact:
+    build: .
+    container_name: mtllm-oopsla2025
+    volumes:
+      # Mount current directory to allow file editing
+      - ./examples:/workspace/examples
+      - ./results:/workspace/results
+    environment:
+      # Environment variables for API keys (set these when running)
+      # - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - PYTHONPATH=/workspace
+    ports:
+      # Ollama port for local models
+      - "11434:11434"
+      # Optional: if you have web interfaces
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+    working_dir: /workspace
