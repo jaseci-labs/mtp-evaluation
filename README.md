@@ -12,7 +12,7 @@ Large Language Models (LLMs) have demonstrated remarkable capabilities across di
 
 2. **Automatic Output Transformation (AOTT)**: A runtime system that automatically converts unstructured LLM outputs into typed programming language objects, handling parsing, validation, and error recovery.
 
-3. **Semantic Type System**: An innovative approach to type annotations that captures both structural types (e.g., `int`, `str`) and semantic meaning (e.g., `'Priority level 1-10': int`), enabling more precise LLM guidance.
+3. **Semantic Type System**: An innovative approach to type annotations that captures both structural types (e.g., `int`, `str`) and semantic meaning, enabling more precise LLM guidance.
 
 4. **Language-Integrated AI**: Native syntax support in the Jac programming language for defining AI-powered functions using the `by llm()` construct, making AI integration as natural as calling regular functions.
 
@@ -31,8 +31,9 @@ This repository contains the complete MTLLM implementation for the Jac programmi
 
 ### Prerequisits
 
-1. Requires python 3.12 or later. : As mtllm is designed as a plugin for
+1. Requires python 3.12 or later : As mtllm is designed as a plugin for jaclang which depends on pyuthon 3.12 or later.
 2. OpenAI API : The menchmark pprogram use gpt-4o for evaluations.
+3. Linux or Mac OS : Not supported on windows as of yet.
 
 ###
 
@@ -52,11 +53,15 @@ pip install "eval/requirements.txt"
 curl -fsSL https://ollama.ai/install.sh
 ```
 
-### Option 2: Using Docker
+### Option 2: Using Docker (For Linux)
 
 A environment with mtllm installed will be available using the provided docker container. Make sure docker is installed.
 
 ```bash
+# Clone the repository
+git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git
+cd mtllm-oopsla2025
+
 # Build and run the container
 chmod +x setup.bash
 ./setup.bash
@@ -65,31 +70,31 @@ This will spool up the docker container and log you in as a root user.
 
 > Please export your openai api key by `export OPENAI_API_KEY=<your-openai-api-key>`.
 
-## Quick Start
+## Usage of MTLLM
 
 ### 1. Basic MTLLM Function
 
-Create a file `hello.jac`:
+Create a file `func.jac`:
 ```jac
-import:py from mtllm.llms {OpenAI}
+import from mtllm.llms {OpenAI}
 
 # Initialize the LLM
-glob llm = OpenAI(model_name="gpt-4o-mini");
+glob llm = OpenAI(model_name="gpt-4o");
 
 # Define an MTLLM function
-can greet(name: str) -> str by llm();
+def calculate_age(cur_year: int, dob: str) -> int by llm()
 
 # Use it
 with entry {
-    result = greet("OOPSLA reviewers");
-    print(result);
+    age = calculate_age(cur_year = 2025, dob = 1998);
+    print(age);
 }
 ```
 
 Run it:
 ```bash
 export OPENAI_API_KEY="your-api-key"
-jac run hello.jac
+jac run func.jac
 ```
 
 ### 2. Type-Safe AI Tasks
