@@ -1,0 +1,13 @@
+lmql
+dspy
+jaclang
+mtllm
+black
+wikipedia
+openai
+loguru
+pyinstrument
+gprof2dot
+pandas
+matplotlib
+seaborn
