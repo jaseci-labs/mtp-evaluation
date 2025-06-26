@@ -1,6 +1,7 @@
 import dspy
 
-llm = dspy.OpenAI(model='gpt-4o', max_tokens=1000)
+
+llm = dspy.LM('openai/gpt-4o')
 
 dspy.configure(lm=llm)
 

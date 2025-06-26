@@ -1,7 +1,7 @@
 import dspy
 from pydantic import BaseModel, Field
 
-llm = dspy.OpenAI(model="gpt-4o")
+llm = dspy.LM('openai/gpt-4o')
 dspy.settings.configure(lm=llm)
 
 

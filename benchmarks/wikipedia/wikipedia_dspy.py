@@ -2,7 +2,7 @@ import dspy
 import wikipedia
 from dspy.predict.parameter import Parameter
 
-llm = dspy.OpenAI(model="gpt-4o")
+llm = dspy.LM('openai/gpt-4o')
 dspy.settings.configure(lm=llm)
 
 
@@ -25,7 +25,7 @@ question = "Where is Apple Headquaters located?"
 result = get_answer(question=question)
 print("Question: ", question)
 print("Answer: ", result.answer)
-question = "Who is Jason Mars?"
+question = "Who is Elon Musk?"
 result = get_answer(question=question)
 print("Question: ", question)
 print("Answer: ", result.answer)

@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 from typing import List
 
 
-llm = dspy.OpenAI(model="gpt-4o", max_tokens=1024)
+llm = dspy.LM('openai/gpt-4o')
 dspy.settings.configure(lm=llm)
 
 

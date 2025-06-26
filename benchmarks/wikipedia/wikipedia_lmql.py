@@ -38,7 +38,7 @@ question = "Where is Apple Headquaters located?"
 answer = get_answer(question)
 print("Question: ", question)
 print("Answer: ", answer)
-question = "Who is Jason Mars?"
+question = "Who is Elon Musk?"
 answer = get_answer(question)
 print("Question: ", question)
 print("Answer: ", answer)

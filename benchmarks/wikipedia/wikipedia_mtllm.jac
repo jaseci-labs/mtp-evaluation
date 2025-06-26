@@ -10,7 +10,11 @@ def get_wikipedia_summary(title: str) -> str {
 def get_answer(question: str) -> str by llm(method="ReAct", tools=[get_wikipedia_summary]);
 
 with entry {
-    question = "Does Iran have a Nuclear Program?";
+    question = "Where is Apple Headquaters located?";
+    answer = get_answer(question);
+    print("Question:", question);
+    print("Answer:", answer);
+    question = "Who is Elon Musk?";
     answer = get_answer(question);
     print("Question:", question);
     print("Answer:", answer);
