@@ -20,7 +20,11 @@ git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git
 cd mtllm-oopsla2025
 
 # Install dependencies required for evaluation.
-pip install ".[openai, ollama]"
+pip install ".[openai, ollama, tools]"
+pip install "eval/requirements.txt"
+
+# Install Ollama for evaluation with llama models
+curl -fsSL https://ollama.ai/install.sh
 ```
 
 ### Option 2: Using Docker
