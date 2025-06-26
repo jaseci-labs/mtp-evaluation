@@ -21,8 +21,17 @@ RUN git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git . \
     && ls -la
 
 # Install MTLLM with dependencies for evaluation
-RUN pip install --upgrade pip \
-    && pip install ".[openai, ollama]"
+RUN pip install --upgrade pip && \
+    pip install ".[openai, ollama, tools]"
+
+# Install evaluation requirements separately
+RUN if [ -f "eval/requirements.txt" ]; then \
+        echo "Found eval/requirements.txt, installing..." && \
+        pip install -r "eval/requirements.txt"; \
+    else \
+        echo "eval/requirements.txt not found, listing directory contents:" && \
+        find . -name "requirements.txt" -type f; \
+    fi
 
 # Install Ollama for local model support (optional)
 RUN curl -fsSL https://ollama.ai/install.sh | sh || echo "Ollama installation completed"
