@@ -6,11 +6,10 @@ services:
     container_name: mtllm-oopsla2025
     volumes:
       # Mount current directory to allow file editing
-      - ./examples:/workspace/examples
+      - ./examples:/workspace/benchmarks
       - ./results:/workspace/results
     environment:
       # Environment variables for API keys (set these when running)
-      # - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - PYTHONPATH=/workspace
     ports:
