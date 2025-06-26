@@ -1,30 +1,40 @@
-# MTLLM: Meaning-Typed Large Language Models for Jac
+# MTLLM: OOPSLA 2025 Artifact : 359
 
-**OOPSLA 2025 Artifact**
+**Meaning-Typed Programming: Language Abstraction andRuntime for Model-Integrated Applications**
 
-This repository contains the MTLLM (Meaning-Typed Large Language Model) implementation for the Jac programming language, as described in our OOPSLA 2025 paper.
+This repository contains a vsersion of the MTLLM (Meaning-Typed Large Language Model) implementation for the Jac programming language, as described in our OOPSLA 2025 paper. The full plugin is available as part of the [Jaseci-ecosystem](https://www.jac-lang.org/learn/jac-mtllm/with_llm/) and is in continuous development.
 
-## Quick Installation
+## Setup Instructions
+
+### Prerequisits
+
+1. Requires python 3.12 or later. : As mtllm is designed as a plugin for
+2. OpenAI API : The menchmark pprogram use gpt-4o for evaluations.
 
 ### Option 1: Direct Installation
+
+In an existing environment with python 3.12 or later
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mtllm-oopsla2025.git
+git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git
 cd mtllm-oopsla2025
 
-# Install dependencies
-pip install -r requirements.txt
-
-# Install MTLLM
-pip install -e .
+# Install dependencies required for evaluation.
+pip install ".[openai, ollama]"
 ```
 
 ### Option 2: Using Docker
+
+A environment with mtllm installed will be available using the provided docker container. Make sure docker is installed.
+
 ```bash
 # Build and run the container
-docker build -t mtllm-artifact .
-docker run -it mtllm-artifact
+chmod +x setup.bash
+./setup.bash
 ```
+This will spool up the docker container and log you in as a root user.
+
+> Please export your openai api key by `export OPENAI_API_KEY=<your-openai-api-key>`.
 
 ## Quick Start
 
