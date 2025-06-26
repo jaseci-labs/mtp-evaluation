@@ -1,8 +1,31 @@
 # MTLLM: OOPSLA 2025 Artifact : 359
 
-**Meaning-Typed Programming: Language Abstraction andRuntime for Model-Integrated Applications**
+**Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications**
 
-This repository contains a vsersion of the MTLLM (Meaning-Typed Large Language Model) implementation for the Jac programming language, as described in our OOPSLA 2025 paper. The full plugin is available as part of the [Jaseci-ecosystem](https://www.jac-lang.org/learn/jac-mtllm/with_llm/) and is in continuous development.
+## Introduction
+
+Large Language Models (LLMs) have demonstrated remarkable capabilities across diverse tasks, yet integrating them into traditional programming languages remains challenging due to their probabilistic nature and lack of structured output guarantees. This artifact presents **MTLLM** (Meaning-Typed Large Language Model), a novel programming language abstraction that bridges the gap between the structured world of programming languages and the unstructured outputs of LLMs.
+
+**Key Contributions:**
+
+1. **Type-Safe LLM Integration**: MTLLM provides compile-time type checking for LLM-powered functions, ensuring that AI-generated outputs conform to expected data structures and types.
+
+2. **Automatic Output Transformation (AOTT)**: A runtime system that automatically converts unstructured LLM outputs into typed programming language objects, handling parsing, validation, and error recovery.
+
+3. **Semantic Type System**: An innovative approach to type annotations that captures both structural types (e.g., `int`, `str`) and semantic meaning (e.g., `'Priority level 1-10': int`), enabling more precise LLM guidance.
+
+4. **Language-Integrated AI**: Native syntax support in the Jac programming language for defining AI-powered functions using the `by llm()` construct, making AI integration as natural as calling regular functions.
+
+**What This Artifact Demonstrates:**
+
+- **Seamless AI Integration**: Write functions that leverage LLMs as easily as traditional functions
+- **Type Safety**: Ensure LLM outputs match expected types at both compile-time and runtime
+- **Performance**: Benchmarks comparing MTLLM against existing frameworks like DSPy and LMQL
+- **Practical Applications**: Real-world examples ranging from simple data transformation to complex reasoning tasks
+
+This implementation represents the first programming language to provide native, type-safe LLM integration with automatic output transformation, enabling developers to harness the power of large language models while maintaining the reliability and structure expected in software systems.
+
+This repository contains the complete MTLLM implementation for the Jac programming language, as described in our OOPSLA 2025 paper. The full plugin is available as part of the [Jaseci ecosystem](https://www.jac-lang.org/learn/jac-mtllm/with_llm/) and is in continuous development.
 
 ## Setup Instructions
 
@@ -10,6 +33,8 @@ This repository contains a vsersion of the MTLLM (Meaning-Typed Large Language M
 
 1. Requires python 3.12 or later. : As mtllm is designed as a plugin for
 2. OpenAI API : The menchmark pprogram use gpt-4o for evaluations.
+
+###
 
 ### Option 1: Direct Installation
 
