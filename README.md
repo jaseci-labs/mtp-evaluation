@@ -9,7 +9,7 @@
 
 This artifact accompanies the OOPSLA 2025 paper "Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications". It provides a complete implementation of **MTLLM**, a novel programming language abstraction that enables type-safe integration of Large Language Models (LLMs) into traditional programming workflows.
 
-> **The Meaning-Typed Programming (MTP) paradigm is implemented in the Jaseci ecosystem as MTLLM plugin to the Jac programming language. Whats being reffered to as the 'MTP' implementation in the paper is this MTLLM plugin.**
+> **The Meaning-Typed Programming (MTP) paradigm is implemented in the Jaseci ecosystem as the MTLLM plugin to the Jac programming language. What's being referred to as the 'MTP' implementation in the paper is this MTLLM plugin.**
 
 **Key Innovation**: MTLLM bridges the gap between the structured world of programming languages and the unstructured outputs of LLMs through a type system that captures both structural types and semantic meaning, enabling compile-time guarantees for AI-powered functions.
 
@@ -186,7 +186,7 @@ with entry {
 - **Type Coercion**: Automatic parsing and validation of complex types (lists, objects, enums)
 - **Error Recovery**: Robust handling of malformed LLM outputs with retry mechanisms
 - **Native Agentic Support**: MTLLM supports ReAct to be used to build agentic applications
-- **Vision Model Support**: MTLLM can inference with muilti-modal models which can take images and videos as inputs.
+- **Vision Model Support**: MTLLM can infer with multi-modal models which can take images and videos as inputs.
 
 > **📖 Complete Documentation**: [MTLLM User Guide](https://www.jac-lang.org/learn/jac-mtllm)
 
@@ -196,12 +196,13 @@ This artifact includes a comprehensive evaluation suite that reproduces all expe
 
 ### Benchmark Tasks
 
-The evaluation covers 12 diverse tasks across different domains:
+The evaluation covers 13 diverse tasks across different domains:
 
 | Category | Task | Description |
 |----------|------|-------------|
 | **Text Processing** | `translation` | Multi-language text translation |
 | | `text_to_type` | Converting unstructured text to typed objects |
+| | `template` | Give Output according to a predefined template |
 | **Reasoning** | `mcq_reason` | Multiple-choice question reasoning |
 | | `math_problem` | Mathematical word problem solving |
 | | `odd_word_out` | Pattern recognition and categorization |
@@ -220,7 +221,7 @@ The evaluation measures:
 - **Token Usage**: Total tokens consumed per task
 - **Runtime**: Execution time per benchmark
 - **Cost**: Estimated API costs (USD)
-- **Sensitivity**: Impact to Accuracy from coding practices
+- **Sensitivity**: Impact on Accuracy from coding practices
 
 ## Claims Validation
 
@@ -229,16 +230,16 @@ The paper makes four key claims that this artifact validates:
 ### Claim 1: Development Complexity Reduction
 *MTLLM reduces development complexity for model-integrated applications*
 
-This evaluation is done mainly through the a case study of compareing the code using Lines-of-code as the metric. The three versions of the benchmark programs used in the paper are included in the `benchmarks/` directory. We also have a user study evaluation which supports this claim as well documented in the paper.
+This evaluation is done mainly through a case study of comparing the code using Lines-of-code as the metric. The three versions of the benchmark programs used in the paper are included in the `benchmarks/` directory. We also have a user study evaluation which supports this claim as well documented in the paper.
 
-**Evidence**: Compare MTLLM implementations with DSPy/LMQL baselines in `benchmarks/` directory. MTLLM consistently requires fewer lines of code and less boilerplate.
+**Evidence**: Compare MTLLM implementations with DSPy/LMQL baselines in the `benchmarks/` directory. MTLLM consistently requires fewer lines of code and less boilerplate.
 
 ### Claim 2: Competitive Accuracy
 *MTLLM achieves similar or better accuracy than baseline frameworks*
 
-To support this claim we do an evaluation where we run the benchmark programs 20 trials and take avarge success rate. In addition to this we conduct a thorough evaluation with multiple LLMs using the GSM8k data set for the math problem benchmark. However, this requires running llama models on local hardware which would produce variable results we have a reasonable timout limits. Hence, we only include the scripts for running the experiments with OpenAI GPT models.
+To support this claim we do an evaluation where we run the benchmark programs 20 trials and take the average success rate. In addition to this, we conduct a thorough evaluation with multiple LLMs using the GSM8k dataset for the math problem benchmark. However, this requires running llama models on local hardware which would produce variable results. We have reasonable timeout limits. Hence, we only include the scripts for running the experiments with OpenAI GPT models.
 
-**Evidence**: Run evaluation suite to reproduce accuracy results from Table 2 in the paper.
+**Evidence**: Run the evaluation suite to reproduce accuracy results from Table 2 in the paper.
 
 ```bash
 # (requires OpenAI API key)
@@ -247,14 +248,14 @@ cd eval
 # Generate accuracy summary statistics
 python overall_accuracy.py
 
-# Genarate evaluation results for math problem benchmark for the GSM8k dataset.
+# Generate evaluation results for the math problem benchmark for the GSM8k dataset.
 python GSM8k_accuracy.py
 ```
 
 ### Claim 3: Efficient Resource Usage
 *MTLLM demonstrates similar or lower token usage, cost, and runtime compared to baselines*
 
-The cost is calculated using the openai cost equation as discussed in the paper. To measure token usage we used custom versions of LMQL, DSPy and MTLLM where the prompts and LLM responces are recorded. In this artifact we do not include these custom versions. Hence the token usage and cost evaluation is not available in the artifact. Still we include runtime evaluation scripts.
+The cost is calculated using the OpenAI cost equation as discussed in the paper. To measure token usage we used custom versions of LMQL, DSPy, and MTLLM where the prompts and LLM responses are recorded. In this artifact, we do not include these custom versions. Hence the token usage and cost evaluation is not available in the artifact. Still, we include runtime evaluation scripts.
 
 **Evidence**: Resource usage metrics are captured during evaluation and match paper results.
 ```bash
@@ -267,14 +268,14 @@ python eval.py --config eval.config.json --impl both
 ### Claim 4: Resilience to Coding Practices
 *MTLLM demonstrates resilience to suboptimal coding practices*
 
-We evaluate the robustness of MTLLM(MTP) against bad coding practices of developers. For this we introduced seven variations of the level genarator benchmark with different degrees of coding practices.
+We evaluate the robustness of MTLLM(MTP) against bad coding practices of developers. For this, we introduced seven variations of the level generator benchmark with different degrees of coding practices.
 
 **Evidence**: Robustness tests show MTLLM maintains performance across different implementation styles.
 
 ```bash
 cd eval/sensitivity_eval
 
-# Run the following script to genarate the results.
+# Run the following script to generate the results.
 python exp.py
 ```
 
@@ -291,7 +292,7 @@ cd jaseci/jac/examples/rpg_game/jac_impl/jac_impl_6
 jac run main.jac
 ```
 
-This demonstrates real-world application of MTLLM for dynamic content generation in an interactive environment.
+This demonstrates the real-world application of MTLLM for dynamic content generation in an interactive environment.
 
 ## Repository Structure
 
