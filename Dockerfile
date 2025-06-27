@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /workspace
 
 # Clone the repository
-RUN git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git . \
+RUN git clone --recurse-submodules https://github.com/Jayanaka-98/mtllm-oopsla2025.git . \
     && ls -la
 
 # Install MTLLM with dependencies for evaluation

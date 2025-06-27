@@ -37,7 +37,7 @@ This artifact uses the PiPy of MTLLM which is locked to 0.3.8 and the commit on 
 In an existing environment with python 3.12 or later
 ```bash
 # Clone the repository
-git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git
+git clone --recurse-submodules https://github.com/Jayanaka-98/mtllm-oopsla2025.git
 cd mtllm-oopsla2025
 
 # Install dependencies required for evaluation.
@@ -54,7 +54,7 @@ A environment with mtllm installed will be available using the provided docker c
 
 ```bash
 # Clone the repository
-git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git
+git --recurse-submodules clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git
 cd mtllm-oopsla2025
 
 # Build and run the container
@@ -167,160 +167,9 @@ jac run main.jac
 
 ## Troubleshooting
 
-**Import Error**: Make sure `jaclang` is installed:
-```bash
-pip install jaclang
-```
-
 **API Key Error**: Set your API keys as environment variables.
 
 **Ollama Connection Error**: Ensure Ollama is running:
 ```bash
 ollama serve
 ```
-
-## Paper Claims Validation
-
-To validate the main claims from our paper:
-
-1. **Run performance benchmarks**:
-   ```bash
-   cd benchmarks
-   python run_performance.py
-   ```
-
-2. **Test type safety**:
-   ```bash
-   cd examples/type_safety
-   jac run type_validation.jac
-   ```
-
-3. **Compare with baselines**:
-   ```bash
-   python compare_with_baseline.py
-   ```
-
-## License
-
-MIT License - see [LICENSE](LICENSE) file.
-
-## Citation
-
-```bibtex
-@inproceedings{yourname2025mtllm,
-  title={MTLLM: Meaning-Typed Large Language Models as Programming Language Constructs},
-  author={Your Name and Co-authors},
-  booktitle={OOPSLA 2025},
-  year={2025}
-}
-```
-
----
-
-## Step 4: Create Simple Dockerfile
-
-```dockerfile
-FROM python:3.12-slim
-
-WORKDIR /workspace
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
-
-# Copy requirements and install
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-# Copy source code
-COPY . .
-RUN pip install -e .
-
-# Install Ollama for local models
-RUN curl -fsSL https://ollama.ai/install.sh | sh
-
-CMD ["bash"]
-```
-
-## Step 5: Create Simple Examples
-
-### examples/basic/simple_chat.jac
-```jac
-import:py from mtllm.llms {OpenAI}
-
-glob llm = OpenAI(model_name="gpt-4o-mini");
-
-can chat(message: str, context: str = "") -> str by llm();
-
-with entry {
-    response = chat("Hello! How does MTLLM work?", "You are an AI assistant explaining MTLLM to researchers.");
-    print(response);
-}
-```
-
-### examples/advanced/data_analysis.jac
-```jac
-import:py from mtllm.llms {OpenAI}
-
-glob llm = OpenAI();
-
-obj Analysis {
-    has insights: list[str];
-    has recommendations: list[str];
-    has confidence: 'Confidence level 0-1': float;
-}
-
-def analyze_data(data: str) -> Analysis by llm();
-
-with entry {
-    data = "Sales increased 25% in Q1, decreased 10% in Q2, stable in Q3";
-    analysis = analyze_data(data);
-    
-    print("Insights:", analysis.insights);
-    print("Recommendations:", analysis.recommendations);
-    print(f"Confidence: {analysis.confidence}");
-}
-```
-
-## Step 6: Push to GitHub
-
-```bash
-# Add all files
-git add .
-git commit -m "Initial MTLLM artifact for OOPSLA 2025"
-
-# Create GitHub repo and push
-git remote add origin https://github.com/yourusername/mtllm-oopsla2025.git
-git push -u origin main
-```
-
-## Step 7: Create Release for Submission
-
-1. Go to your GitHub repository
-2. Click "Releases" → "Create a new release"
-3. Tag: `v1.0.0-oopsla2025`
-4. Title: "OOPSLA 2025 Artifact: MTLLM v1.0.0"
-5. Description: Link to paper and brief overview
-6. Publish release
-
-## Final Repository Structure
-
-```
-mtllm-oopsla2025/
-├── mtllm/                 # Core MTLLM code (copied from jaseci)
-│   ├── __init__.py
-│   ├── llms/
-│   └── core/
-├── examples/              # Simple demonstration examples
-│   ├── basic/
-│   └── advanced/
-├── benchmarks/            # Performance validation (optional)
-├── tests/                 # Basic tests (optional)
-├── README.md              # Installation and quick start
-├── requirements.txt       # Dependencies
-├── setup.py              # Package setup
-├── Dockerfile            # Docker support
-├── LICENSE               # License file
-└── .gitignore           # Git ignore rules
-```
-
-This approach is much simpler and gives reviewers exactly what they need: your MTLLM implementation with clear installation instructions and working examples. The README focuses on getting started quickly rather than extensive documentation.
