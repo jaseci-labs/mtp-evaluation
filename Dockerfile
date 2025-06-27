@@ -12,6 +12,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     build-essential \
     nano \
+    python3-pygame \
+    libx11-6 \
+    x11-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
