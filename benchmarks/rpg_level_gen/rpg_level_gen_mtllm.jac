@@ -1,6 +1,6 @@
 import from mtllm.llms {OpenAI}
 
-glob llm = OpenAI(model_name="gpt-4o", verbose=True);
+glob llm = OpenAI(model_name="gpt-4o", verbose=False);
 
 obj Position {
     has x: int, y: int;
@@ -26,9 +26,11 @@ obj LevelManager {
     has current_level: int = 0, current_difficulty: int = 1,
         prev_levels: list[Level] = [], prev_level_maps: list[Map] = [];
 
-    def create_next_level(last_levels: list[Level], difficulty: int, level_width: int, level_height: int)
+    def create_next_level (last_levels: list[Level], difficulty: int, level_width: int, level_height: int)
     -> Level by llm();
-    
+
+    def create_next_map(level: Level) -> Map by llm();
+
     def get_next_level -> tuple(Level, Map) {
         self.current_level += 1;
         # Keeping Only the Last 3 Levels
@@ -42,9 +44,10 @@ obj LevelManager {
             self.current_difficulty,
             20, 20
         );
+
         self.prev_levels.append(new_level);
         # Generating the Map of the New Level
-        new_level_map = Map(level=new_level by llm());
+        new_level_map = self.create_next_map(new_level);
         self.prev_level_maps.append(new_level_map);
         # Increasing the Difficulty for end of every 2 Levels
         if self.current_level % 2 == 0 {
@@ -57,7 +60,7 @@ obj LevelManager {
 '''Get the map of the level'''
 def get_map(map: Map) -> str {
     map_tiles = [['.' for _ in range(map.level.width)] for _ in range(map.level.height)];
-    
+
     for wall in map.walls {
         for x in range(wall.start_pos.x, wall.end_pos.x + 1) {
             for y in range(wall.start_pos.y, wall.end_pos.y + 1) {
@@ -65,11 +68,11 @@ def get_map(map: Map) -> str {
             }
         }
     }
-    
+
     for obs in map.small_obstacles {
         map_tiles[obs.y-1][obs.x-1] = 'B';
     }
-    
+
     for enemy in map.enemies {
         map_tiles[enemy.y-1][enemy.x-1] = 'E';
     }
@@ -81,7 +84,7 @@ def get_map(map: Map) -> str {
 
 with entry {
     level_manager = LevelManager();
-    for _ in range(2) {
+    for i in range(2) {
         (new_level, new_level_map) = level_manager.get_next_level();
         print(new_level);
         print('\n'.join(get_map(new_level_map)));
