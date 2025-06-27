@@ -73,8 +73,8 @@ git clone --recurse-submodules https://github.com/Jayanaka-98/mtllm-oopsla2025.g
 cd mtllm-oopsla2025
 
 # Build and start the Docker container
-chmod +x setup.bash
-./setup.bash
+chmod +x setup.sh
+./setup.sh
 
 # Inside the container, set your API key
 export OPENAI_API_KEY="your-api-key-here"
@@ -128,7 +128,7 @@ with entry {
 }
 ```
 
-**Run**: `jac run func.jac`
+**Run**: `jac run examples/func.jac`
 
 ### 2. LLM-Powered Object Construction
 
@@ -152,7 +152,7 @@ with entry {
 }
 ```
 
-**Run**: `jac run object.jac`
+**Run**: `jac run examples/object.jac`
 
 ### 3. LLM-Enhanced Object Methods
 
@@ -178,7 +178,7 @@ with entry {
 }
 ```
 
-**Run**: `jac run method.jac`
+**Run**: `jac run examples/method.jac`
 
 ### Advanced Features
 
@@ -218,13 +218,14 @@ The evaluation covers 12 diverse tasks across different domains:
 ```bash
 # Run all benchmarks (requires OpenAI API key)
 cd eval
-python eval.py
+python eval.py --config eval.config.json --impl both
 
 # Run specific benchmark categories
-python eval.py --tasks translation,text_to_type,mcq_reason
+python eval.py --config eval.config.json --impl both --problem specific_problem_name
 
-# Generate summary statistics
+# Generate accuracy summary statistics
 python overall_accuracy.py
+python GSM8k_accuracy.py
 ```
 
 ### Expected Results
@@ -242,29 +243,52 @@ The evaluation measures:
 - **Runtime**: Execution time per benchmark
 - **Cost**: Estimated API costs (USD)
 
-<!-- ## Claims Validation
+## Claims Validation
 
 The paper makes four key claims that this artifact validates:
 
 ### Claim 1: Development Complexity Reduction
 *MTLLM reduces development complexity for model-integrated applications*
 
-**Evidence**: Compare MTLLM implementations with DSPy/LMQL baselines in `/benchmarks/` directory. MTLLM consistently requires fewer lines of code and less boilerplate.
+This evaluation is done mainly through the a case study of compareing the code using Lines-of-code as the metric. The three versions of the benchmark programs used in the paper are included in the `benchmarks/` directory. We also have a user study evaluation which supports this claim as well documented in the paper.
 
-### Claim 2: Competitive Accuracy  
+**Evidence**: Compare MTLLM implementations with DSPy/LMQL baselines in `benchmarks/` directory. MTLLM consistently requires fewer lines of code and less boilerplate.
+
+### Claim 2: Competitive Accuracy
 *MTLLM achieves similar or better accuracy than baseline frameworks*
 
+To support this claim we do an evaluation where we run the benchmark programs 20 trials and take avarge success rate. In addition to this we conduct a thorough evaluation with multiple LLMs using the GSM8k data set for the math problem benchmark. However, this requires running llama models on local hardware which would produce variable results we have a reasonable timout limits. Hence, we only include the scripts for running the experiments with OpenAI GPT models.
+
 **Evidence**: Run evaluation suite to reproduce accuracy results from Table 2 in the paper.
+
+```bash
+# (requires OpenAI API key)
+cd eval
+
+# Generate accuracy summary statistics
+python overall_accuracy.py
+
+# Genarate evaluation results for math problem benchmark for the GSM8k dataset.
+python GSM8k_accuracy.py
+```
 
 ### Claim 3: Efficient Resource Usage
 *MTLLM demonstrates similar or lower token usage, cost, and runtime compared to baselines*
 
+The cost is calculated using the openai cost equation as discussed in the paper. To measure token usage we used custom versions of LMQL, DSPy and MTLLM where the prompts and LLM responces are recorded. In this artifact we do not include these custom versions. Hence the token usage and cost evaluation is not available in the artifact. Still we include runtime evaluation scripts.
+
 **Evidence**: Resource usage metrics are captured during evaluation and match paper results.
+```bash
+cd eval
+
+# The following command runs the evaluation suite and measures runtime for both MTLLM and baseline implementations:
+python eval.py --config eval.config.json --impl both
+```
 
 ### Claim 4: Resilience to Coding Practices
 *MTLLM demonstrates resilience to suboptimal coding practices*
 
-**Evidence**: Robustness tests show MTLLM maintains performance across different implementation styles. -->
+**Evidence**: Robustness tests show MTLLM maintains performance across different implementation styles.
 
 ## Interactive Demo
 
