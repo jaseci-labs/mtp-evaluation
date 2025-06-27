@@ -7,7 +7,9 @@
 
 ## Overview
 
-This artifact accompanies the OOPSLA 2025 paper "Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications". It provides a complete implementation of **MTLLM** (Meaning-Typed Large Language Models), a novel programming language abstraction that enables type-safe integration of Large Language Models (LLMs) into traditional programming workflows.
+This artifact accompanies the OOPSLA 2025 paper "Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications". It provides a complete implementation of **MTLLM**, a novel programming language abstraction that enables type-safe integration of Large Language Models (LLMs) into traditional programming workflows.
+
+**The Meaning-Typed Programming (MTP) paradigm is implemented in the Jaseci ecosystem as MTLLM plugin to the Jac programming language. Whats being reffered to as the 'MTP' implementation in the paper is this MTLLM plugin.**
 
 **Key Innovation**: MTLLM bridges the gap between the structured world of programming languages and the unstructured outputs of LLMs through a type system that captures both structural types and semantic meaning, enabling compile-time guarantees for AI-powered functions.
 
@@ -183,6 +185,8 @@ with entry {
 - **Multiple LLM Support**: OpenAI GPT, Anthropic Claude, local models via Ollama
 - **Type Coercion**: Automatic parsing and validation of complex types (lists, objects, enums)
 - **Error Recovery**: Robust handling of malformed LLM outputs with retry mechanisms
+- **Native Agentic Support**: MTLLM supports ReAct to be used to build agentic applications
+- **Vision Model Support**: MTLLM can inference with muilti-modal models which can take images and videos as inputs.
 
 > **📖 Complete Documentation**: [MTLLM User Guide](https://www.jac-lang.org/learn/jac-mtllm)
 
