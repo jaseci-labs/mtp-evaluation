@@ -213,28 +213,6 @@ The evaluation covers 12 diverse tasks across different domains:
 | | `personality_finder` | Personality analysis |
 | | `wikipedia` | Information extraction and summarization |
 
-### Running the Complete Evaluation
-
-```bash
-# Run all benchmarks (requires OpenAI API key)
-cd eval
-python eval.py --config eval.config.json --impl both
-
-# Run specific benchmark categories
-python eval.py --config eval.config.json --impl both --problem specific_problem_name
-
-# Generate accuracy summary statistics
-python overall_accuracy.py
-python GSM8k_accuracy.py
-```
-
-### Expected Results
-
-The evaluation will generate:
-- `benchmark_detailed_results_[timestamp].csv`: Detailed per-task results
-- `benchmark_summary_results_[timestamp].csv`: Aggregated performance metrics
-- Console output showing real-time progress and accuracy scores
-
 ### Performance Metrics
 
 The evaluation measures:
@@ -242,6 +220,7 @@ The evaluation measures:
 - **Token Usage**: Total tokens consumed per task
 - **Runtime**: Execution time per benchmark
 - **Cost**: Estimated API costs (USD)
+- **Sensitivity**: Impact to Accuracy from coding practices
 
 ## Claims Validation
 
@@ -288,7 +267,16 @@ python eval.py --config eval.config.json --impl both
 ### Claim 4: Resilience to Coding Practices
 *MTLLM demonstrates resilience to suboptimal coding practices*
 
+We evaluate the robustness of MTLLM(MTP) against bad coding practices of developers. For this we introduced seven variations of the level genarator benchmark with different degrees of coding practices.
+
 **Evidence**: Robustness tests show MTLLM maintains performance across different implementation styles.
+
+```bash
+cd eval/sensitivity_eval
+
+# Run the following script to genarate the results.
+python exp.py
+```
 
 ## Interactive Demo
 

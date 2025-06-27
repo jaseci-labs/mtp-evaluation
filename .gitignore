@@ -1,7 +1,10 @@
 # Jaclang
 __jac_gen__/
 .jac_mypy_cache/
-temp*
+temp_*
+temp.*
+tmp/
+tmp*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
