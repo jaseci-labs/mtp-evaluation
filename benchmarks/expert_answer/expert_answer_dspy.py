@@ -1,6 +1,8 @@
 import dspy
 
-llm = dspy.LM('openai/gpt-4o')
+dspy.settings.cache = None
+
+llm = dspy.LM('openai/gpt-4o', temperature=0.2)
 dspy.settings.configure(lm=llm)
 
 

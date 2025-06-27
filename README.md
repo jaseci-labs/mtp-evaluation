@@ -4,13 +4,13 @@
 
 ## Introduction
 
-Large Language Models (LLMs) have demonstrated remarkable capabilities across diverse tasks, yet integrating them into traditional programming languages remains challenging due to their probabilistic nature and lack of structured output guarantees. This artifact presents **MTLLM** (Meaning-Typed Large Language Model), a novel programming language abstraction that bridges the gap between the structured world of programming languages and the unstructured outputs of LLMs.
+Large Language Models (LLMs) have demonstrated remarkable capabilities across diverse tasks, yet integrating them into traditional programming languages remains challenging due to their probabilistic nature and lack of structured output guarantees. This artifact presents **MTLLM** (The implementation of Meaning0-Typed Programming), a novel programming language abstraction that bridges the gap between the structured world of programming languages and the unstructured outputs of LLMs.
 
 **Key Contributions:**
 
 1. **Type-Safe LLM Integration**: MTLLM provides compile-time type checking for LLM-powered functions, ensuring that AI-generated outputs conform to expected data structures and types.
 
-2. **Automatic Output Transformation (AOTT)**: A runtime system that automatically converts unstructured LLM outputs into typed programming language objects, handling parsing, validation, and error recovery.
+2. **Automatic Output Transformation**: A runtime system that automatically converts unstructured LLM outputs into typed programming language objects, handling parsing, validation, and error recovery.
 
 3. **Semantic Type System**: An innovative approach to type annotations that captures both structural types (e.g., `int`, `str`) and semantic meaning, enabling more precise LLM guidance.
 
@@ -19,7 +19,7 @@ Large Language Models (LLMs) have demonstrated remarkable capabilities across di
 **What This Artifact Demonstrates:**
 
 - **Seamless AI Integration**: Write functions that leverage LLMs as easily as traditional functions
-- **Type Safety**: Ensure LLM outputs match expected types at both compile-time and runtime
+- **Claims**: Ensure LLM outputs match expected types at both compile-time and runtime
 - **Performance**: Benchmarks comparing MTLLM against existing frameworks like DSPy and LMQL
 - **Practical Applications**: Real-world examples ranging from simple data transformation to complex reasoning tasks
 
@@ -46,7 +46,7 @@ git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git
 cd mtllm-oopsla2025
 
 # Install dependencies required for evaluation.
-pip install ".[openai, ollama, tools]"
+pip install "mtllm[openai, ollama, tools]==0.3.8"
 pip install "eval/requirements.txt"
 
 # Install Ollama for evaluation with llama models

@@ -1,5 +1,5 @@
 lmql
-dspy
+dspy==2.5.9
 jaclang
 mtllm
 black

@@ -22,7 +22,7 @@ RUN git clone https://github.com/Jayanaka-98/mtllm-oopsla2025.git . \
 
 # Install MTLLM with dependencies for evaluation
 RUN pip install --upgrade pip && \
-    pip install ".[openai, ollama, tools]"
+    pip install "mtllm[openai, ollama, tools]==0.3.8"
 
 # Install evaluation requirements separately
 RUN if [ -f "eval/requirements.txt" ]; then \
