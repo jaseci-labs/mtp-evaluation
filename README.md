@@ -2,9 +2,6 @@
 
 **Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications**
 
-[![Paper](https://img.shields.io/badge/Paper-OOPSLA%202025-blue)](https://doi.org/10.1145/placeholder)
-[![Artifact](https://img.shields.io/badge/Artifact-In_Production-green)](https://doi.org/10.1145/placeholder)
-
 ## Overview
 
 This artifact accompanies the OOPSLA 2025 paper "Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications". It provides a complete implementation of **MTLLM**, a novel programming language abstraction that enables type-safe integration of Large Language Models (LLMs) into traditional programming workflows.
