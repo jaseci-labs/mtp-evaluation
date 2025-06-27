@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Large Language Models (LLMs) have demonstrated remarkable capabilities across diverse tasks, yet integrating them into traditional programming languages remains challenging due to their probabilistic nature and lack of structured output guarantees. This artifact presents **MTLLM** (The implementation of Meaning0-Typed Programming), a novel programming language abstraction that bridges the gap between the structured world of programming languages and the unstructured outputs of LLMs.
+Large Language Models (LLMs) have demonstrated remarkable capabilities across diverse tasks, yet integrating them into traditional programming languages remains challenging due to their probabilistic nature and lack of structured output guarantees. This artifact presents **MTLLM** (The implementation of Meaning-Typed Programming in open-sourced Jaseci ecosystem), a novel programming language abstraction that bridges the gap between the structured world of programming languages and the unstructured outputs of LLMs.
 
 **Key Contributions:**
 
@@ -16,23 +16,18 @@ Large Language Models (LLMs) have demonstrated remarkable capabilities across di
 
 4. **Language-Integrated AI**: Native syntax support in the Jac programming language for defining AI-powered functions using the `by llm()` construct, making AI integration as natural as calling regular functions.
 
-**What This Artifact Demonstrates:**
-
-- **Seamless AI Integration**: Write functions that leverage LLMs as easily as traditional functions
-- **Claims**: Ensure LLM outputs match expected types at both compile-time and runtime
-- **Performance**: Benchmarks comparing MTLLM against existing frameworks like DSPy and LMQL
-- **Practical Applications**: Real-world examples ranging from simple data transformation to complex reasoning tasks
-
-This implementation represents the first programming language to provide native, type-safe LLM integration with automatic output transformation, enabling developers to harness the power of large language models while maintaining the reliability and structure expected in software systems.
-
 This repository contains the complete MTLLM implementation for the Jac programming language, as described in our OOPSLA 2025 paper. The full plugin is available as part of the [Jaseci ecosystem](https://www.jac-lang.org/learn/jac-mtllm/with_llm/) and is in continuous development.
+
+## What this Artifact Contain
+
+This artifact uses the PiPy of MTLLM which is locked to 0.3.8 and the commit on the original repository is lined in this repository. This repo contains the jac-language version and the jac-mtllm plugin as well as other parts of the ecosystem. Whithin this repo you can find benchmarks and scripts used for evaluation conducted for the paper.
 
 ## Setup Instructions
 
 ### Prerequisits
 
-1. Requires python 3.12 or later : As mtllm is designed as a plugin for jaclang which depends on pyuthon 3.12 or later.
-2. OpenAI API : The menchmark pprogram use gpt-4o for evaluations.
+1. Requires python 3.12 or later : As mtllm is designed as a plugin for jaclang which depends on pyuthon 3.12 or later. (Not manda6tory with when running the docker container)
+2. OpenAI API : The benchmark programs use OpenAI GPT models for evaluations.
 3. Linux or Mac OS : Not supported on windows as of yet.
 
 ###
@@ -68,13 +63,18 @@ chmod +x setup.bash
 ```
 This will spool up the docker container and log you in as a root user.
 
-> Please export your openai api key by `export OPENAI_API_KEY=<your-openai-api-key>`.
+_Please export your openai api key by_,
+```bash
+export OPENAI_API_KEY=<your-openai-api-key>
+```
 
 ## Usage of MTLLM
 
 ### 1. Basic MTLLM Function
 
-Create a file `func.jac`:
+A basic MTLLM function in Jac allows you to define a function whose implementation is powered by an LLM, while maintaining type safety. The `by llm()` syntax delegates the function logic to the configured LLM, and the return type is enforced at runtime. This enables seamless integration of AI-generated logic into regular Jac code.
+
+Create a file `func.jac` (Figure 8(a) in paper):
 ```jac
 import from mtllm.llms {OpenAI}
 
@@ -91,88 +91,67 @@ with entry {
 }
 ```
 
-Run it:
-```bash
-export OPENAI_API_KEY="your-api-key"
-jac run func.jac
+**Run it**: `jac run func.jac`
+
+> Full documentation is available [here](https://www.jac-lang.org/learn/jac-mtllm/usage/#basic-functions)
+
+### 2. MTLLM as object constructors
+
+MTLLM can be used to automatically generate object fields using LLMs, ensuring that the generated values conform to the specified types. By leveraging the `by llm()` construct within object initializers, you can delegate the creation of certain attributes (such as a name or date of birth) to the LLM, while maintaining type safety and structure.
+
+Create a file `object.jac` (Figure 8(b) in paper):
+```jac
+import from mtllm.llms {OpenAI}
+
+# Initialize the LLM
+glob llm = OpenAI(model_name="gpt-4o");
+
+obj Person {
+    has name: str;
+    has dob: str;
+}
+with entry {
+    einstien = Person(name="Einstien" by llm());
+    print(f"{einstien.name} was born in {einstien.dob}");
+}
 ```
 
-### 2. Type-Safe AI Tasks
+**Run it**: `jac run object.jac`
 
-Create `tasks.jac`:
+> Full documentation is available [here](https://www.jac-lang.org/learn/jac-mtllm/usage)
+
+### 3. MTLLM as methods of objects
+
+MTLLM functions can also be defined as methods within objects, allowing LLM-powered logic to operate on object state. By annotating a method with `by llm()`, you enable the LLM to access the object's fields (such as `self`) and generate outputs that respect the method's return type. This pattern is useful for tasks like generating derived attributes or performing AI-driven computations specific to an object instance.
+
+Create a file `method.jac` (Figure 8(c) in paper):
 ```jac
-import:py from mtllm.llms {OpenAI}
+import from mtllm.llms {OpenAI}
 
-glob llm = OpenAI();
+# Initialize the LLM
+glob llm = OpenAI(model_name="gpt-4o");
 
-obj Task {
-    has description: str;
-    has priority: 'Priority level 1-10': int;
-    has estimated_hours: 'Time needed in hours': float;
+obj Person {
+    has name : str;
+    has dob : str;
+
+    def calculate_age (cur_year: int) -> int by llm(incl_info=(self), temperature=0.7);
 }
-
-def analyze_task(description: str) -> Task by llm();
 
 with entry {
-    task = analyze_task("Implement the MTLLM artifact for OOPSLA");
-    print(f"Task: {task.description}");
-    print(f"Priority: {task.priority}");
-    print(f"Estimated hours: {task.estimated_hours}");
+    einstein = Person(name="Einstein", dob="March 14, 1879");
+    print(einstein.calculate_age(2024));
 }
 ```
+**Run it**: `jac run method.jac`
 
-Run it:
-```bash
-jac run tasks.jac
-```
+> Full documentation is available [here](https://www.jac-lang.org/learn/jac-mtllm/usage)
 
-### 3. Using Local Models (Ollama)
+## Importing and using models
 
-```jac
-import:py from mtllm.llms {Ollama}
+All available models and how to integrate them are covered in the [docs](https://www.jac-lang.org/learn/jac-mtllm/model_declaration/).
 
-# Use local Ollama model
-glob llm = Ollama(model_name="llama3.2:1b");
-
-can summarize(text: str) -> 'Brief summary': str by llm();
-
-with entry {
-    summary = summarize("Large language models are transforming programming...");
-    print(summary);
-}
-```
-
-Setup Ollama:
-```bash
-# Install Ollama
-curl -fsSL https://ollama.ai/install.sh | sh
-
-# Pull a model
-ollama pull llama3.2:1b
-
-# Run the example
-jac run summary.jac
-```
-
-## API Key Setup
-
-### OpenAI
-```bash
-export OPENAI_API_KEY="sk-..."
-```
-
-### Anthropic
-```bash
-export ANTHROPIC_API_KEY="sk-ant-..."
-```
-
-### Local Models (No API key needed)
-```bash
-# Just install and run Ollama
-ollama serve
-```
-
-## Examples Directory
+## Running the full playable RPG game with LLM powered level genaration
 
 The `examples/` directory contains:
 - `basic/` - Simple MTLLM usage patterns
@@ -181,8 +160,9 @@ The `examples/` directory contains:
 
 Run any example:
 ```bash
-cd examples/basic
-jac run simple_chat.jac
+pip install pygame
+cd jaseci/jac/examples/rpg_game/jac_impl/jac_impl_6
+jac run main.jac
 ```
 
 ## Troubleshooting
