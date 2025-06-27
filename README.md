@@ -3,7 +3,7 @@
 **Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications**
 
 [![Paper](https://img.shields.io/badge/Paper-OOPSLA%202025-blue)](https://doi.org/10.1145/placeholder)
-[![Artifact](https://img.shields.io/badge/Artifact-Evaluated-green)](https://doi.org/10.1145/placeholder)
+[![Artifact](https://img.shields.io/badge/Artifact-In_Production-green)](https://doi.org/10.1145/placeholder)
 
 ## Overview
 
