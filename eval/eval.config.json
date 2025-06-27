@@ -1,0 +1,52 @@
+{
+    "standard": {
+        "essay_reviewer": {
+            "dspy": "../benchmarks/essay_reviewer/essay_reviewer_dspy.py",
+            "jac": "../benchmarks/essay_reviewer/essay_reviewer_mtllm.jac"
+        },
+        "expert_answer": {
+            "dspy": "../benchmarks/expert_answer/expert_answer_dspy.py",
+            "jac": "../benchmarks/expert_answer/expert_answer_mtllm.jac"
+        },
+        "joke_gen": {
+            "dspy": "../benchmarks/joke_gen/joke_gen_dspy.py",
+            "jac": "../benchmarks/joke_gen/joke_gen_mtllm.jac"
+        },
+        "math_problem": {
+            "dspy": "../benchmarks/math_problem/math_problem_dspy.py",
+            "jac": "../benchmarks/math_problem/math_problem_mtllm.jac"
+        },
+        "mcq_reason": {
+            "dspy": "../benchmarks/mcq_reason/mcq_reason_dspy.py",
+            "jac": "../benchmarks/mcq_reason/mcq_reason_mtllm.jac"
+        },
+        "odd_word_out": {
+            "dspy": "../benchmarks/odd_word_out/odd_word_out_dspy.py",
+            "jac": "../benchmarks/odd_word_out/odd_word_out_mtllm.jac"
+        },
+        "personality_finder": {
+            "dspy": "../benchmarks/personality_finder/personality_finder_dspy.py",
+            "jac": "../benchmarks/personality_finder/personality_finder_mtllm.jac"
+        },
+        "rpg_level_gen": {
+            "dspy": "../benchmarks/rpg_level_gen/rpg_level_gen_dspy.py",
+            "jac": "../benchmarks/rpg_level_gen/rpg_level_gen_mtllm.jac"
+        },
+        "taskman": {
+            "dspy": "../benchmarks/taskman/taskman_dspy.py",
+            "jac": "../benchmarks/taskman/taskman_mtllm.jac"
+        },
+        "text_to_type": {
+            "dspy": "../benchmarks/text_to_type/text_to_type_dspy.py",
+            "jac": "../benchmarks/text_to_type/text_to_type_mtllm.jac"
+        },
+        "translation": {
+            "dspy": "../benchmarks/translation/translation_dspy.py",
+            "jac": "../benchmarks/translation/translation_mtllm.jac"
+        },
+        "wikipedia": {
+            "dspy": "../benchmarks/wikipedia/wikipedia_dspy.py",
+            "jac": "../benchmarks/wikipedia/wikipedia_mtllm.jac"
+        }
+    }
+}
