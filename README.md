@@ -6,7 +6,7 @@
 
 This artifact accompanies the OOPSLA 2025 paper "Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications". It provides a complete implementation of MTP a novel programming language abstraction that enables type-safe integration of Large Language Models (LLMs) into traditional programming workflows.
 
-> **The Meaning-Typed Programming (MTP) paradigm is implemented in the Jaseci ecosystem as the MTLLM plugin to the Jac programming language. What's being referred to as the 'MTP' implementation in the paper is this MTLLM plugin.**
+> **The Meaning-Typed Programming (MTP) paradigm is implemented in the Jaseci Open-Sourced ecosystem as the MTLLM plugin to the Jac programming language. What's being referred to as the 'MTP' implementation in the paper is this MTLLM plugin.**
 
 **Key Innovation**: MTLLM bridges the gap between the structured world of programming languages and the unstructured outputs of LLMs through a type system that captures both structural types and semantic meaning, enabling compile-time guarantees for AI-powered functions.
 
