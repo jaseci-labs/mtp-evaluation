@@ -372,6 +372,6 @@ ollama pull llama2  # or your preferred model
 
 ### Getting Help
 
-- **MTLLM Documentation**: [https://www.jac-lang.org/learn/jac-mtllm/](https://www.jac-lang.org/learn/jac-mtllm/with_llm/)
+- **MTP Documentation**: [https://www.jac-lang.org/learn/jac-mtllm/](https://www.jac-lang.org/learn/jac-mtllm/with_llm/)
 - **Jac Language Guide**: [https://www.jac-lang.org](https://www.jac-lang.org)
 - **Issues**: Report bugs or ask questions via GitHub Issues
