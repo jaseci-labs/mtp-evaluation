@@ -1,4 +1,4 @@
-# MTLLM: OOPSLA 2025 Artifact \# 359
+# MTP: OOPSLA 2025 Artifact \# 359
 
 **Meaning-Typed Programming: Language Abstraction and Runtime for Model-Integrated Applications**
 
