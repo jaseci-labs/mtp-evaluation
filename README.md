@@ -325,7 +325,7 @@ mtllm-oopsla2025/
 ```
 
 Each benchmark directory contains three implementations:
-- `*_mtllm.jac`: MTLLM implementation
+- `*_mtllm.jac`: MTP implementation
 - `*_dspy.py`: DSPy baseline implementation  
 - `*_lmql.py`: LMQL baseline implementation
 
