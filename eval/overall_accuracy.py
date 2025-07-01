@@ -11,6 +11,7 @@ os.environ["OPENAI_API_CACHE"] = "false"
 os.environ["OPENAI_CACHE"] = "false"
 
 import logging
+import shutil
 
 # Suppress WARNING logs from DSPy
 logging.getLogger().setLevel(logging.ERROR)
@@ -44,6 +45,16 @@ def run_file_and_capture_output(file_path, implementation):
         elif implementation == 'mtllm':
             cmd = ['jac', 'run', file_path]
         else:  # dspy
+            # Remove __pycache__ directories before running
+            folder = os.path.dirname(file_path)
+            for root, dirs, files in os.walk(folder):
+                for d in dirs:
+                    if d == '__pycache__':
+                        pycache_path = os.path.join(root, d)
+                        try:
+                            shutil.rmtree(pycache_path)
+                        except Exception as e:
+                            logging.warning(f"Failed to remove {pycache_path}: {e}")
             cmd = ['python', file_path]
         
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
@@ -163,6 +174,8 @@ def main():
             processed_files = 0
             
             for benchmark in benchmarks:
+                # if benchmark not in ["rpg_level_gen"]:
+                #     continue
                 for implementation in implementations:
                     total_files += 1
                     folder_path = f'../benchmarks/{benchmark}/{benchmark}_{implementation}'
