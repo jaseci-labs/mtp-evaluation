@@ -1,0 +1,3 @@
+benchmark,implementation,file_path,file_exists,total_runs,successful_runs,failed_runs,success_rate,avg_execution_time,min_execution_time,max_execution_time,median_execution_time,std_execution_time,timestamp
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,True,20,0,20,0.0,0,0,0,0,0,2025-06-30T09:44:38.602338
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,True,20,20,0,100.0,1.9831208348274232,1.4839332103729248,10.733755350112915,1.5171856880187988,2.0598289940106165,2025-06-30T09:45:20.276065

@@ -1,0 +1,621 @@
+benchmark,implementation,file_path,run_number,file_exists,success,execution_time,return_code,command,stdout,stderr,timestamp
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,1,True,False,0.14040064811706543,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601104
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,2,True,False,0.1809077262878418,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601202
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,3,True,False,0.15314412117004395,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601262
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,4,True,False,0.17508244514465332,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601358
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,5,True,False,0.1630854606628418,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601418
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,6,True,False,0.15802907943725586,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601472
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,7,True,False,0.1644306182861328,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601536
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,8,True,False,0.16127872467041016,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601591
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,9,True,False,0.16153812408447266,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601644
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,10,True,False,0.16187214851379395,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601706
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,11,True,False,0.13471627235412598,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601760
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,12,True,False,0.1610546112060547,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601814
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,13,True,False,0.16286206245422363,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601876
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,14,True,False,0.1671922206878662,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601931
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,15,True,False,0.1576228141784668,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.601983
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,16,True,False,0.1635897159576416,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.602047
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,17,True,False,0.15773224830627441,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.602102
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,18,True,False,0.16303277015686035,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.602159
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,19,True,False,0.14120125770568848,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.602226
+math_problem,lmql,../benchmarks/math_problem/math_problem_lmql.py,20,True,False,0.16156911849975586,1,python ../benchmarks/math_problem/math_problem_lmql.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/math_problem/math_problem_lmql.py"", line 12, in <module>
+    response = get_answer(question)
+               ^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/api/queries.py"", line 148, in lmql_query_wrapper
+    return module.query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 204, in __call__
+    return call_sync(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/loop.py"", line 37, in call_sync
+    res = loop.run_until_complete(task)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/asyncio/base_events.py"", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 211, in __acall__
+    query_kwargs, runtime_args = self.make_kwargs(*args, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 162, in make_kwargs
+    raise e
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/site-packages/lmql/runtime/lmql_runtime.py"", line 148, in make_kwargs
+    signature: inspect.BoundArguments = signature.bind(*args, **query_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3280, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/jayanaka-98/miniconda3/envs/artifact/lib/python3.12/inspect.py"", line 3193, in _bind
+    raise TypeError(msg) from None
+TypeError: Call to @lmql.query function is missing a required argument: 'query'. Expecting (question, query: str) -> int, but got positional arguments ('Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?',) and keyword arguments {}.",2025-06-30T09:44:38.602284
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,1,True,True,10.733755350112915,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275223
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,2,True,True,1.5537970066070557,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275318
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,3,True,True,1.5124938488006592,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275362
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,4,True,True,1.4839332103729248,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275398
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,5,True,True,1.5196712017059326,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275431
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,6,True,True,1.514700174331665,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275463
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,7,True,True,1.5534486770629883,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275496
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,8,True,True,1.5635530948638916,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275530
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,9,True,True,1.544743299484253,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275562
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,10,True,True,1.5013034343719482,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275594
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,11,True,True,1.5440678596496582,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275626
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,12,True,True,1.4982504844665527,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275658
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,13,True,True,1.5299994945526123,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275690
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,14,True,True,1.5144741535186768,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275722
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,15,True,True,1.5104405879974365,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275753
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,16,True,True,1.5536718368530273,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275886
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,17,True,True,1.5433320999145508,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275931
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,18,True,True,1.4878437519073486,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275965
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,19,True,True,1.4972162246704102,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.275997
+math_problem,dspy,../benchmarks/math_problem/math_problem_dspy.py,20,True,True,1.501720905303955,0,python ../benchmarks/math_problem/math_problem_dspy.py,5,,2025-06-30T09:45:20.276030

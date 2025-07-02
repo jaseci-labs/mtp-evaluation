@@ -1,0 +1,161 @@
+benchmark,implementation,file_path,run_number,file_exists,success,execution_time,return_code,command,stdout,stderr,timestamp
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,1,True,True,5.199048042297363,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982662
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,2,True,True,3.065842390060425,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982732
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,3,True,True,3.089778184890747,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982772
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,4,True,True,2.946850299835205,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982804
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,5,True,True,3.0693368911743164,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982835
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,6,True,True,3.1251871585845947,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982864
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,7,True,True,3.9061954021453857,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982892
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,8,True,True,2.730668067932129,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982921
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,9,True,True,2.6846811771392822,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982950
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,10,True,True,2.5817246437072754,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.982978
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,11,True,True,2.651075601577759,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983006
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,12,True,True,2.6425745487213135,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983035
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,13,True,True,2.891913652420044,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983064
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,14,True,True,3.9989922046661377,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983092
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,15,True,True,3.178567886352539,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983120
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,16,True,True,2.521444797515869,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983168
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,17,True,True,2.8476808071136475,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983200
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,18,True,True,2.7231829166412354,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983351
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,19,True,True,3.1789462566375732,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983400
+expert_answer,lmql,../benchmarks/expert_answer/expert_answer_lmql.py,20,True,True,2.9915239810943604,0,python ../benchmarks/expert_answer/expert_answer_lmql.py,"a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
+
+Large language models are computer programs that use artificial intelligence and machine learning techniques to process and generate human language.",,2025-06-30T14:23:48.983437
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,1,True,False,1.542067527770996,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.484925
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,2,True,False,1.4945755004882812,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485040
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,3,True,False,1.49062180519104,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485101
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,4,True,False,1.5144038200378418,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485186
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,5,True,False,1.5463018417358398,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485240
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,6,True,False,1.5558958053588867,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485289
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,7,True,False,1.53861403465271,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485339
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,8,True,False,1.5439906120300293,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485389
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,9,True,False,1.5391206741333008,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485438
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,10,True,False,1.5320062637329102,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485517
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,11,True,False,1.5436201095581055,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485569
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,12,True,False,1.4958043098449707,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485617
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,13,True,False,1.519160270690918,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485666
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,14,True,False,1.4909415245056152,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485713
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,15,True,False,1.5367674827575684,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485761
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,16,True,False,1.5379462242126465,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485907
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,17,True,False,1.52734375,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.485969
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,18,True,False,1.508474349975586,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.486018
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,19,True,False,1.5381228923797607,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.486067
+expert_answer,dspy,../benchmarks/expert_answer/expert_answer_dspy.py,20,True,False,1.4954228401184082,1,python ../benchmarks/expert_answer/expert_answer_dspy.py,,"Traceback (most recent call last):
+  File ""/home/jayanaka-98/Repos/mtllm-oopsla2025/eval/../benchmarks/expert_answer/expert_answer_dspy.py"", line 8, in <module>
+    dspy.configure_cache(
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'dspy' has no attribute 'configure_cache'",2025-06-30T14:24:21.486114
