@@ -1,0 +1,2 @@
+,QuestionID,Question,GivenAnswer,Model,Program,Output,ExactMatch,Failed,Time(s)
+0,0,Which magazine was started first Arthur's Magazine or First for Women?,Arthur's Magazine,gpt-4o-mini,Jac,,False,True,0
